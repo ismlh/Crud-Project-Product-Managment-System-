@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #333;
+    color: #fff;
+    font-family: 'segoe ui light';
+    font-weight: bold;
+}
+.container{
+    width: 80%;
+}
+h2,p{
+    text-transform: uppercase;
+}
+input:focus{
+    transform: scale(1.01);
+}
+#total{
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+#total::before{
+    content: 'Total : ';
+}
+#Create{
+    width: 90%;
+
+}
+#Create:hover{
+    letter-spacing: 2px;
+}
+table  th{
+    font-size:20px ;
+}
+@media screen and (max-width:600px) {
+    table tbody td{
+        font-size: 13px;
+
+    }
+    table  th{
+        font-size:15px ;
+    }
+    #update,#delete{
+        padding: 4px;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+    }
+}
+#update,#delete{
+    margin-top: 5px;
+}

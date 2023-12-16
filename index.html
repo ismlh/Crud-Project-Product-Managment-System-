@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="container ">
+        <div class="head text-center mt-2">
+            <h2>CRUDS Project</h2>
+            <p class="display-6 mb-1">Product Managment System</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input type="text" placeholder="ProductName" id="ProductName" class="form-control my-2">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 my-1">
+                <input onkeyup="getTotal();"  type="number" placeholder="Price" id="Price" class="form-control">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 my-1" >
+                <input onkeyup="getTotal();" type="number" placeholder="Tax" id="Tax" class="form-control">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 my-1" >
+                <input onkeyup="getTotal();" type="number" placeholder="Adds" id="Adds" class="form-control">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3  my-1">
+                <input onkeyup="getTotal();" type="number" placeholder="Discount" id="Discount" class="form-control">
+            </div>
+            <div class=" col-4 my-2">
+                <small id="total" class="bg-danger"></small>
+            </div>
+            <div class="col-12">
+                <input type="number" placeholder="Count" id="Count" class="form-control my-2">
+            </div>
+            <div class="col-12">
+                <input type="text" placeholder="Category" id="Category" class="form-control my-2">
+            </div>
+            <button id="Create" onclick="addProduct() ;" class="btn btn-outline-danger my-1 m-auto">Create New Product</button>
+            <div class="col-12">
+                <input type="text" onkeyup="searchData(this.value);" placeholder="Search" id="Search" class="form-control my-2">
+            </div>
+            <div class="col-5 ">
+                <button id="SearchTitle" onclick="getMood(this.id);" class="btn btn-outline-danger w-100  text-nowrap ">Search By Title</button>
+            </div>
+            <div class="col-5 offset-md-2">
+                <button id="SearchCategory" onclick="getMood(this.id);" class="btn btn-outline-danger w-100  text-nowrap">Search By Category</button>
+            </div>
+            <button id="deleteAll" onclick="deleteAllProducts() ;" class="btn btn-outline-danger my-2 m-auto"> Delete All Products <span id="itemsCount"></span class=""></button>      
+            
+        </div>
+    </div>
+    <table class="table-hover  w-100 container-md  mt-2 p-2 border-5 text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Tax</th>
+                <th>Ads</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tbody id="tbody" class="border">
+                
+            </tbody>
+        </thead>
+    </table>
+    <div class="mt-5"></div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
